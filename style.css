@@ -1,3 +1,44 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
+    color: #222;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.content {
+    max-width: 1500px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.08);
+    padding: 40px 28px 32px 28px;
+}
+
+h1, h2, h3 {
+    font-family: 'Segoe UI Semibold', Arial, sans-serif;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+h1 a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+h1 a:hover {
+    color: #0077cc;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #0077cc;
+}
 
 .gallery {
     display: flex;
@@ -36,7 +77,6 @@
     display: block;
 }
 
-
 .gallery-item h4{
     text-align: center;
     margin: 10px 0;
@@ -44,182 +84,117 @@
 
 .gallery-item img{
     width: 15vw;
-    height: 10vw
+    height: 10vw;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
-/* Modernize background and content card */
-body {
-    margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+ul {
+    padding-left: 24px;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+ul li{
+    text-align: left;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+p{
     text-align: center;
-    color: #222;
 }
 
-.content {
-    background: #fff;
-    padding: 2.5em 2em;
-    margin: 40px auto;
-    max-width: 900px;
-    border-radius: 18px;
-    box-shadow: 0 6px 32px rgba(60, 80, 120, 0.10), 0 1.5px 6px rgba(60, 80, 120, 0.06);
+hr{
+    margin: 32px auto;
+    width: 90%;
+    border-top: 2px solid #e0e0e0;
 }
 
-/* Headings */
-h1, h2, h3, h4 {
-    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-    color: #2a3a5a;
-    margin-top: 0.7em;
-    margin-bottom: 0.4em;
-}
-
-h1 a {
-    text-decoration: none;
-    color: #2a3a5a;
-    transition: color 0.2s;
-}
-h1 a:hover {
-    color: #4f8cff;
-}
-
-u {
-    text-decoration-thickness: 2px;
-    text-underline-offset: 6px;
-}
-
-/* Gallery styles */
-.gallery {
+/*rows*/
+.row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 32px;
-    margin-bottom: 32px;
-}
-
-.gallery-item {
+    flex-direction: row;
+    align-items: stretch;
+    margin: 32px 0;
     background: #f6f8fa;
     border-radius: 14px;
-    box-shadow: 0 2px 12px rgba(60, 80, 120, 0.07);
-    padding: 18px 18px 10px 18px;
-    text-align: center;
-    transition: box-shadow 0.2s, transform 0.2s;
-    width: 220px;
-    cursor: pointer;
-    position: relative;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
     overflow: hidden;
-    border: none;
-}
-.gallery-item:hover {
-    box-shadow: 0 6px 24px rgba(79, 140, 255, 0.13);
-    transform: translateY(-4px) scale(1.03);
 }
 
-.gallery-item img {
-    width: 180px;
-    height: 120px;
+.rowItem{
+    width: 48%;
+    align-items: center;
+    display: flex;
+    justify-content: center; 
+    padding: 32px 1%;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.rowItem img{
+    max-width: 100%;
+    width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: auto;
     object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 12px;
-    box-shadow: 0 1px 6px rgba(60, 80, 120, 0.10);
-    transition: opacity 0.2s;
 }
 
-.gallery-item h4 {
-    margin: 0.5em 0 0 0;
-    font-size: 1.1em;
-    color: #2a3a5a;
-    font-weight: 600;
+.rowItem img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.12);
 }
 
-/* Button styling */
+.rowItem p {
+    font-size: 1.2em;
+    color: #2c3e50;
+    text-align: center;
+    margin: 0;
+}
+
 button {
-    background: linear-gradient(90deg, #4f8cff 0%, #6fd6ff 100%);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
     padding: 12px 28px;
     font-size: 1.1em;
-    font-weight: 600;
+    background: linear-gradient(90deg, #0077cc 0%, #00b4d8 100%);
+    color: #fff;
+    border: none;
+    border-radius: 7px;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(79, 140, 255, 0.10);
-    transition: background 0.2s, transform 0.1s;
+    margin-top: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: background 0.2s, transform 0.2s;
 }
 button:hover {
-    background: linear-gradient(90deg, #357ae8 0%, #4f8cff 100%);
+    background: linear-gradient(90deg, #005fa3 0%, #0096b3 100%);
     transform: translateY(-2px) scale(1.04);
 }
 
-/* Lists */
-ul {
-    padding-left: 1.2em;
-    margin-bottom: 1.2em;
-}
-ul li {
-    text-align: left;
-    margin-bottom: 0.5em;
-}
-
-/* Responsive */
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
     .content {
-        max-width: 98vw;
-        padding: 18px 4vw;
+        padding: 18px 4vw 18px 4vw;
     }
-    .gallery {
+    .rowItem {
+        padding: 18px 2%;
+    }
+}
+
+@media (max-width: 800px) {
+    .row {
         flex-direction: column;
+        margin: 18px 0;
+    }
+    .rowItem {
+        width: 100%;
         align-items: center;
-        gap: 24px;
+        display: flex;
+        justify-content: center;
+        padding: 18px 2%;
     }
-    .gallery-item {
-        width: 90vw;
-        max-width: 340px;
-    }
-    .gallery-item img {
-        width: 90vw;
-        max-width: 260px;
-        height: 90vw;
-        max-height: 160px;
-    }
-}
-
-img, iframe {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 24px auto 24px auto;
-    border-radius: 12px;
-    box-shadow: 0 2px 16px rgba(60, 80, 120, 0.10);
-}
-
-/* For embedded games, set a good aspect ratio and max size */
-iframe {
-    width: 100%;
-    min-height: 360px;
-    aspect-ratio: 16 / 9;
-    background: #222;
-    border: none;
-}
-
-/* Gallery images override */
-.gallery-item img {
-    width: 180px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 12px;
-    box-shadow: 0 1px 6px rgba(60, 80, 120, 0.10);
-    transition: opacity 0.2s;
-}
-
-/* Responsive tweaks */
-@media (max-width: 700px) {
-    iframe {
-        min-height: 180px;
-    }
-    .gallery-item img {
-        width: 90vw;
-        max-width: 260px;
-        height: 90vw;
-        max-height: 160px;
+    .rowItem img {
+        width: 100%;
     }
 }
