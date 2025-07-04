@@ -9,7 +9,7 @@ body {
     font-family: "Roboto", sans-serif;
     /*background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);*/
     color: #222;
-    font-size: 1.7vh;
+    font-size: 2vh;
     text-align: center;
 }
 
@@ -27,9 +27,13 @@ body {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14);
 }
 
-h1, h2, h3, h4 {
-    margin-top: 0;
+h1, h4 {
+    margin-top: 0px;
     margin-bottom: 18px;
+}
+
+p, h2, h3{
+    margin: 40px 0 0 0;
 }
 
 h1 a {
@@ -98,6 +102,20 @@ a:hover {
     height: 20vw;
     border-radius: 8px;
     object-fit: cover;
+}
+
+@media (max-width: 800px) {
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+    }
+    .gallery-item{
+        width: 100%;
+        margin-left: 0;
+    }
+    body{
+        font-size: 2.7vh;
+    }
 }
 
 ul {
@@ -188,9 +206,23 @@ hr{
     display: block;
 }
 
+@media (max-width: 800px) {
+    .row {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .rowItem {
+        width: 100%;
+        padding: 5% 1%;
+    }
+    .rowItem img {
+        width: 100%;
+    }
+}
 
 .rowItem p {
-    font-size: 1.2em;
+    font-size: 1.15em;
     color: #2c3e50;
     text-align: center;
     margin: 0;
@@ -218,26 +250,6 @@ button:hover {
     .content {
         padding: 18px 4vw 18px 4vw;
     }
-    .rowItem {
-        padding: 18px 2%;
-    }
-}
-
-@media (max-width: 800px) {
-    .row {
-        flex-direction: column;
-        margin: 18px 0;
-    }
-    .rowItem {
-        width: 100%;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        padding: 18px 2%;
-    }
-    .rowItem img {
-        width: 100%;
-    }
 }
 
 /*menu*/
@@ -249,7 +261,7 @@ button:hover {
 
 .menu ol {
     list-style-type: none;
-    font-size: 1.8em;
+    font-size: 1.8rem;
     margin: 0;
     padding: 0;
     width: 80%;
